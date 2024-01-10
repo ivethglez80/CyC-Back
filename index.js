@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, ()=>{
     sequelize.sync({force:true}); //cambiar a false para produccion
